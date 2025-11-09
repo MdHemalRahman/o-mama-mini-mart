@@ -214,6 +214,21 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/o8ahmgEQtZU"
+              title="O Mama Smart Freezer Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
