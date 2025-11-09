@@ -21,7 +21,7 @@ const Navigation = () => {
       },
       { 
         threshold: 0,
-        rootMargin: "-80px 0px 0px 0px" // Navbar height offset
+        rootMargin: "-80px 0px -85% 0px" // Only detect top portion of FAQ section
       }
     );
 
