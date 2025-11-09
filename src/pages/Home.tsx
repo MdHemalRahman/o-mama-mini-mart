@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, ShoppingBag, Smartphone, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import omamaFreezer from "@/assets/omama-freezer.jpg";
@@ -210,6 +211,92 @@ const Home = () => {
           <Button asChild size="lg" variant="secondary">
             <Link to="/contact">Request a Consultation</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Get answers to common questions about O Mama Smart Freezer
+          </p>
+          
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-left">
+                What makes O Mama different from traditional vending machines?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                O Mama is a mini-mart experience, not a vending machine. You can open the door, browse freely, pick up items to check them, and place them back if you change your mind—just like using your home freezer. Traditional vending machines lock you into a choice once you press a button.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-left">
+                How does the payment system work?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Payment is completely touchless and automatic. Simply scan the QR code with your phone to open the door, take what you want, and close the door. The system automatically detects what you've taken and deducts the amount from your digital wallet through the app.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-left">
+                What are the requirements to install O Mama at our workplace?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                You need to provide three essentials: stable internet connection, continuous power supply, and physical security for the unit. O Mama handles everything else—ownership, installation, maintenance, and inventory management are all included in our full-service partnership.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-left">
+                What is the cost and contract duration?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                The only upfront cost is a BDT 100,000 refundable security deposit. The minimum contract is 24 months. Installation, maintenance, and inventory management are all provided at no additional cost as part of our full-service model.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5">
+              <AccordionTrigger className="text-left">
+                How is food quality and freshness maintained?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                We maintain a complete cold chain from our hygienic kitchen to your freezer with 24/7 IoT monitoring of temperature and inventory. Each unit has dedicated CCTV for security and quality assurance. Fresh items are restocked regularly based on real-time demand data.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6">
+              <AccordionTrigger className="text-left">
+                Can we customize the menu for our organization?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Yes! We offer a diverse menu of fresh cut fruits, healthy snacks, beverages, and light meals. We can work with you to understand your team's preferences and adjust the product mix accordingly to ensure maximum satisfaction and utilization.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7">
+              <AccordionTrigger className="text-left">
+                How long does installation take?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                Installation is quick and hassle-free. Once the location and power/internet requirements are confirmed, our team can typically complete the installation and setup within 1-2 business days, including staff training on how to use the system.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-8">
+              <AccordionTrigger className="text-left">
+                What kind of organizations benefit most from O Mama?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                O Mama is ideal for corporate offices, hospitals, universities, and any workplace with 50+ employees who value health, convenience, and 24/7 access to fresh food. It's especially beneficial for organizations with shift workers or extended operating hours.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

@@ -14,7 +14,25 @@ const Navigation = () => {
     { path: "/platform", label: "Technology" },
     { path: "/partnership", label: "Partnership" },
     { path: "/menu", label: "Food & Freshness" },
+    { path: "/#faq", label: "FAQ", isAnchor: true },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor?: boolean) => {
+    if (isAnchor && path.includes("#")) {
+      e.preventDefault();
+      const hash = path.split("#")[1];
+      const element = document.getElementById(hash);
+      
+      if (location.pathname === "/" && element) {
+        // Already on home page, just scroll
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        // Navigate to home page first, then scroll
+        window.location.href = path;
+      }
+      setIsOpen(false);
+    }
+  };
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -36,6 +54,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={(e) => handleNavClick(e, link.path, link.isAnchor)}
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                   isActive(link.path)
@@ -68,7 +87,7 @@ const Navigation = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.path, link.isAnchor)}
                   className={cn(
                     "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
                     isActive(link.path)
