@@ -19,7 +19,10 @@ const Navigation = () => {
           setIsFaqInView(entry.isIntersecting);
         });
       },
-      { threshold: 0.2 }
+      { 
+        threshold: 0,
+        rootMargin: "-80px 0px 0px 0px" // Navbar height offset
+      }
     );
 
     observer.observe(faqSection);
