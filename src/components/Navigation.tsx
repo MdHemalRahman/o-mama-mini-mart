@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +6,25 @@ import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFaqInView, setIsFaqInView] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const faqSection = document.getElementById("faq");
+    if (!faqSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsFaqInView(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(faqSection);
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -34,7 +52,12 @@ const Navigation = () => {
     }
   };
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => {
+    if (path === "/#faq") {
+      return location.pathname === "/" && isFaqInView;
+    }
+    return location.pathname === path;
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
