@@ -12,12 +12,12 @@ const Platform = () => {
     {
       icon: Thermometer,
       title: "24/7 Cold Chain Monitoring",
-      description: "Real-time temperature tracking ensures food safety and quality. Automated alerts prevent any quality issues.",
+      description: "Maintain 100% Food Safety Compliance. Real-time temperature alerts ensure product integrity and immediate issue resolution.",
     },
     {
       icon: BarChart3,
       title: "Smart Inventory Management",
-      description: "AI-powered demand prediction and automatic restocking. Always stocked with what your team wants.",
+      description: "Minimize Waste & Guarantee Stock. Our AI-driven system predicts demand and reduces restocking time by X%.",
     },
     {
       icon: Wallet,
@@ -37,7 +37,7 @@ const Platform = () => {
     {
       icon: Zap,
       title: "Instant Access Control",
-      description: "QR code authentication with instant unlock. No cards, no keys, just your smartphone.",
+      description: "Effortless User Onboarding. Grant and revoke access instantly via our cloud platform.",
     },
   ];
 
@@ -107,7 +107,7 @@ const Platform = () => {
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Real-Time Remote Monitoring
+                Data That Drives Decision-Making
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Our cloud-based platform provides complete visibility into every aspect of your O Mama Smart Freezer operation.
@@ -143,6 +143,14 @@ const Platform = () => {
                   </div>
                   <div>
                     <strong>Performance Metrics:</strong> Comprehensive reporting on transaction volume and revenue
+                  </div>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-3 h-3 rounded-full bg-primary"></div>
+                  </div>
+                  <div>
+                    <strong>Consumption Trends for Menu Planning:</strong> Provide aggregated data on peak usage times and popular products, allowing the client to subsidize specific items or optimize break schedules
                   </div>
                 </li>
               </ul>
@@ -203,13 +211,13 @@ const Platform = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-primary-light text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Experience Enterprise Technology
+            Experience Technology Platform
           </h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
             See how our advanced platform can transform your workplace food service
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link to="/contact">Request a Consultation</Link>
+            <Link to="/contact">Try Out Now</Link>
           </Button>
         </div>
       </section>

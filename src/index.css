@@ -17,11 +17,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    /* O Mama Orange as primary brand color */
-    --primary: 18 100% 50%;
+    /* O Mama Dark Green as primary brand color */
+    --primary: 140 95% 14%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 18 100% 65%;
-    --primary-dark: 18 100% 40%;
+    --primary-light: 140 95% 25%;
+    --primary-dark: 140 95% 8%;
 
     /* Professional dark navy for text and accents */
     --secondary: 220 25% 15%;
@@ -30,7 +30,7 @@ All colors MUST be HSL.
     --muted: 220 15% 96%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 18 100% 50%;
+    --accent: 140 95% 14%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,12 +38,12 @@ All colors MUST be HSL.
 
     --border: 220 15% 90%;
     --input: 220 15% 90%;
-    --ring: 18 100% 50%;
+    --ring: 140 95% 14%;
 
     --radius: 0.75rem;
 
     /* Hero section gradient */
-    --gradient-hero: linear-gradient(135deg, hsl(18 100% 50%) 0%, hsl(18 100% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(140 95% 14%) 0%, hsl(140 95% 25%) 100%);
     
     /* Feature highlights */
     --feature-bg: 220 15% 98%;
@@ -63,8 +63,8 @@ All colors MUST be HSL.
     --popover: 220 20% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 18 100% 55%;
-    --primary-foreground: 220 25% 8%;
+    --primary: 140 95% 20%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 20%;
     --secondary-foreground: 0 0% 95%;
@@ -72,15 +72,15 @@ All colors MUST be HSL.
     --muted: 220 15% 18%;
     --muted-foreground: 220 10% 65%;
 
-    --accent: 18 100% 55%;
-    --accent-foreground: 220 25% 8%;
+    --accent: 140 95% 20%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50.6%;
     --destructive-foreground: 0 0% 95%;
 
     --border: 220 15% 20%;
     --input: 220 15% 20%;
-    --ring: 18 100% 55%;
+    --ring: 140 95% 20%;
     
     --feature-bg: 220 20% 14%;
   }

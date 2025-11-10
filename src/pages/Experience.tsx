@@ -56,6 +56,29 @@ const Experience = () => {
         </div>
       </section>
 
+      {/* Client Success Story */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: '#014721'}}>
+              HR Partner Testimonial
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Watch a testimonial from an HR partner at SAVOR, confirming that the O Mama Smart Freezer has solved their employees' issue with lack of convenient, healthy breakfast and lunch options nearby.
+            </p>
+            <div className="aspect-[9/16] max-w-sm mx-auto rounded-xl overflow-hidden shadow-2xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/mzh978dzt_E?cc_load_policy=1&cc_lang_pref=en"
+                title="O Mama Client Success Story - SAVOR HR Partner Testimonial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works - 4 Steps */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -181,7 +204,7 @@ const Experience = () => {
             Give your team the convenience and freedom they deserve
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link to="/contact">Request a Consultation</Link>
+            <Link to="/contact">Get Started Today</Link>
           </Button>
         </div>
       </section>

@@ -241,7 +241,7 @@ const Menu = () => {
             Let's discuss menu options that work best for your organization
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link to="/contact">Request a Consultation</Link>
+            <Link to="/contact">Request a Food Trial</Link>
           </Button>
         </div>
       </section>

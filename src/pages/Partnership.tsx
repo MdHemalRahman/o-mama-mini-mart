@@ -19,7 +19,7 @@ const Partnership = () => {
   const clientResponsibilities = [
     {
       title: "Stable Internet Connection",
-      description: "Required for IoT connectivity and real-time monitoring",
+      description: "A dedicated, stable Wi-Fi connection for real-time inventory and remote monitoring",
       icon: "🌐",
     },
     {
@@ -29,7 +29,7 @@ const Partnership = () => {
     },
     {
       title: "Physical Security",
-      description: "Safe installation space with adequate physical protection",
+      description: "A secure, indoor location for the unit, ensuring the safety of the equipment and products",
       icon: "🔒",
     },
   ];
@@ -89,7 +89,7 @@ const Partnership = () => {
             <div className="text-center mb-12">
               <Users size={48} className="mx-auto mb-4 text-primary" />
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Your Responsibilities
+                Minimal Client Requirements for a Seamless Launch
               </h2>
               <p className="text-lg text-muted-foreground">
                 Three essential requirements for successful operation
@@ -143,7 +143,7 @@ const Partnership = () => {
                     </div>
                     <div className="pt-4 border-t border-border">
                       <p className="text-sm text-muted-foreground">
-                        <strong>Note:</strong> This deposit is fully refundable upon successful completion of the contract term, subject to equipment condition.
+                        <strong>Note:</strong> This deposit is fully refundable upon successful completion of the contract term, securing your access to the latest smart technology.
                       </p>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ const Partnership = () => {
                     </div>
                     <div className="pt-4 border-t border-border">
                       <p className="text-sm text-muted-foreground">
-                        <strong>Note:</strong> Contract can be renewed upon mutual agreement. Long-term partnerships receive priority service and additional benefits.
+                        <strong>Note:</strong> The 24-month term guarantees long-term stable pricing and full access to all platform updates and support services.
                       </p>
                     </div>
                   </div>
@@ -258,13 +258,13 @@ const Partnership = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-primary-light text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Partner with O Mama?
+            Ready to Transform Your Employee Amenity Program?
           </h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
             Let's discuss how O Mama can enhance your workplace environment
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link to="/contact">Request a Consultation</Link>
+            <Link to="/contact">Start the Partnership</Link>
           </Button>
         </div>
       </section>

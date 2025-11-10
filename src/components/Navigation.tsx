@@ -32,7 +32,7 @@ const Navigation = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/experience", label: "The Experience" },
-    { path: "/platform", label: "Technology" },
+    { path: "/platform", label: "Platform" },
     { path: "/partnership", label: "Partnership" },
     { path: "/menu", label: "Food & Freshness" },
     { path: "/#faq", label: "FAQ", isAnchor: true },
@@ -42,13 +42,15 @@ const Navigation = () => {
     if (isAnchor && path.includes("#")) {
       e.preventDefault();
       const hash = path.split("#")[1];
-      const element = document.getElementById(hash);
       
-      if (location.pathname === "/" && element) {
+      if (location.pathname === "/") {
         // Already on home page, just scroll
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       } else {
-        // Navigate to home page first, then scroll
+        // Navigate to home page with hash
         window.location.href = path;
       }
       setIsOpen(false);
@@ -65,13 +67,15 @@ const Navigation = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-end justify-between pb-2" style={{ height: '60px' }}>
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="text-2xl font-bold text-primary">O Mama</div>
-            <div className="hidden sm:block text-sm text-muted-foreground border-l pl-3 ml-3 border-border">
-              Fresh Food · Smart Life
-            </div>
+          <Link to="/" className="flex items-center space-x-3" onClick={(e) => {
+            if (location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}>
+            <div className="text-3xl font-bold text-primary">O Mama</div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -92,7 +96,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild className="ml-4">
-              <Link to="/contact">Request a Consultation</Link>
+              <Link to="/contact">Contact</Link>
             </Button>
           </div>
 
@@ -126,7 +130,7 @@ const Navigation = () => {
               ))}
               <Button asChild className="mt-4">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Request a Consultation
+                  Contact
                 </Link>
               </Button>
             </div>
