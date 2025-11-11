@@ -75,11 +75,11 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-primary/5 py-20">
+      <section id="contact-hero" className="py-20" style={{backgroundColor: '#F0FFF0'}}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Request a Consultation
+              <span style={{color: '#014721'}}>Request a</span> <span style={{color: '#2AA63E'}}>Consultation</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Let's discuss how O Mama Smart Freezer can enhance your workplace environment. Our team will contact you to understand your needs and provide a customized solution.

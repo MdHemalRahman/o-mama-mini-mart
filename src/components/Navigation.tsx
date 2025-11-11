@@ -11,9 +11,8 @@ const Navigation = () => {
 
   useEffect(() => {
     const faqSection = document.getElementById("faq");
-    if (!faqSection) return;
-
-    const observer = new IntersectionObserver(
+    
+    const faqObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           setIsFaqInView(entry.isIntersecting);
@@ -21,12 +20,15 @@ const Navigation = () => {
       },
       { 
         threshold: 0,
-        rootMargin: "-80px 0px -85% 0px" // Only detect top portion of FAQ section
+        rootMargin: "-80px 0px -85% 0px"
       }
     );
 
-    observer.observe(faqSection);
-    return () => observer.disconnect();
+    if (faqSection) faqObserver.observe(faqSection);
+    
+    return () => {
+      faqObserver.disconnect();
+    };
   }, [location.pathname]);
 
   const navLinks = [
@@ -41,20 +43,18 @@ const Navigation = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor?: boolean) => {
     if (isAnchor && path.includes("#")) {
       e.preventDefault();
-      const hash = path.split("#")[1];
+      const [pathname, hash] = path.split("#");
       
-      if (location.pathname === "/") {
-        // Already on home page, just scroll
+      if (location.pathname === pathname || (pathname === "" && location.pathname === "/")) {
         const element = document.getElementById(hash);
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       } else {
-        // Navigate to home page with hash
         window.location.href = path;
       }
-      setIsOpen(false);
     }
+    setIsOpen(false);
   };
 
   const isActive = (path: string) => {
@@ -65,10 +65,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="sticky top-0 z-50 backdrop-blur-sm bg-background/95">
       <div className="container mx-auto px-4">
         <div className="flex items-end justify-between pb-2" style={{ height: '60px' }}>
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" onClick={(e) => {
             if (location.pathname === "/") {
               e.preventDefault();
@@ -78,7 +77,6 @@ const Navigation = () => {
             <div className="text-3xl font-bold text-primary">O Mama</div>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
@@ -95,12 +93,11 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Button asChild className="ml-4">
+            <Button asChild className="ml-4" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
               <Link to="/contact">Contact</Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-foreground hover:bg-muted rounded-lg"
@@ -109,7 +106,6 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-2">
@@ -128,7 +124,7 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="mt-4">
+              <Button asChild className="mt-4" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Contact
                 </Link>

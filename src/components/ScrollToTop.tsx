@@ -6,7 +6,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     if (hash) {
-      // If there's a hash, scroll to that element after a short delay
+      // If there's a hash (like FAQ), scroll to that element after a short delay
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
         if (element) {
@@ -14,8 +14,16 @@ const ScrollToTop = () => {
         }
       }, 100);
     } else {
-      // Otherwise, scroll to top
-      window.scrollTo(0, 0);
+      // For all other route changes, scroll to top after render completes
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'auto'
+          });
+        });
+      });
     }
   }, [pathname, hash]);
 

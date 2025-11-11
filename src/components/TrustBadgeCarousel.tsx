@@ -1,4 +1,36 @@
-import { motion } from "framer-motion";
+// CSS styles for continuous scrolling animation and scrollbar hiding
+const scrollingStyles = `
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @keyframes scroll-logos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll-logos 25s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+  
+  .animate-scroll.paused {
+    animation-play-state: paused;
+  }
+`;
+
+import { useRef, useEffect } from 'react';
 
 const TrustedPartners = () => {
   const partners = [
@@ -26,61 +58,97 @@ const TrustedPartners = () => {
     { name: "Zanala", logo: "https://home.sohub.com.bd/assets/customers/zanala0.png" },
   ];
 
-  // Duplicate partners array for seamless loop
-  const duplicatedPartners = [...partners, ...partners];
+  // Triple duplicate partners array for infinite loop
+  const duplicatedPartners = [...partners, ...partners, ...partners];
+  
+  // Refs for container elements
+  const outerContainerRef = useRef(null);
+  const innerContainerRef = useRef(null);
+  
+  // Calculate logo set width (approximate)
+  const logoSetWidth = partners.length * 160; // Approximate width per logo including gaps
+  
+  // Scroll monitoring for infinite loop
+  const handleScroll = () => {
+    if (!outerContainerRef.current) return;
+    
+    const scrollLeft = outerContainerRef.current.scrollLeft;
+    
+    // Instant teleport logic
+    if (scrollLeft >= logoSetWidth * 2) {
+      // Scrolled too far right - teleport back to middle
+      outerContainerRef.current.scrollLeft = logoSetWidth;
+    } else if (scrollLeft <= 0) {
+      // Scrolled too far left - teleport forward to middle
+      outerContainerRef.current.scrollLeft = logoSetWidth;
+    }
+  };
+  
+  // Set up scroll monitoring
+  useEffect(() => {
+    const container = outerContainerRef.current;
+    if (container) {
+      // Initialize scroll position to middle set
+      container.scrollLeft = logoSetWidth;
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, [logoSetWidth]);
+  
+  const handleTouchStart = () => {
+    if (innerContainerRef.current) {
+      innerContainerRef.current.classList.add('paused');
+    }
+  };
+  
+  const handleTouchEnd = () => {
+    if (innerContainerRef.current) {
+      innerContainerRef.current.classList.remove('paused');
+    }
+  };
 
   return (
-    <section id="trusted-by-our-customers" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block pb-3">
-            Trusted by Industry Leaders
-            <motion.div
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-gradient-to-r from-primary to-orange-500"
-              initial={{ width: 0 }}
-              whileInView={{ width: "100%" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            />
-          </h2>
-        </motion.div>
+    <>
+      <style>{scrollingStyles}</style>
+      <section id="trusted-by-our-customers" className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block pb-3">
+              Trusted by Industry Leaders
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 w-full bg-gradient-to-r from-primary to-orange-500" />
+            </h2>
+          </div>
 
-        {/* Marquee container */}
-        <div className="relative overflow-hidden max-w-7xl mx-auto">
-          <motion.div
-            className="flex gap-8 md:gap-12"
-            animate={{
-              x: [0, -50 + "%"],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 40,
-                ease: "linear",
-              },
-            }}
-          >
-            {duplicatedPartners.map((partner, index) => (
-              <div
-                key={`${partner.name}-${index}`}
-                className="flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:scale-110 p-4"
+          {/* Continuous scrolling logo strip */}
+          <div className="relative max-w-7xl mx-auto">
+            <div ref={outerContainerRef} className="overflow-x-auto scrollbar-hide h-24">
+              <div 
+                ref={innerContainerRef}
+                className="flex gap-8 animate-scroll whitespace-nowrap w-[300%]"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                onMouseEnter={handleTouchStart}
+                onMouseLeave={handleTouchEnd}
               >
-                <img
-                  src={partner.logo}
-                  alt={`${partner.name} - Trusted O Mama partner`}
-                  className="h-16 md:h-20 w-auto object-contain"
-                />
+                {/* Triple duplicated set of logos for seamless infinite loop */}
+                {duplicatedPartners.map((partner, index) => (
+                  <div
+                    key={`${partner.name}-${index}`}
+                    className="flex items-center justify-center flex-shrink-0 inline-block mx-8 p-4"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} - Trusted O Mama partner`}
+                      className="h-16 md:h-20 w-auto object-contain"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </motion.div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

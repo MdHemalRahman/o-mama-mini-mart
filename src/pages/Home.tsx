@@ -38,7 +38,7 @@ const Home = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-white py-8 md:py-11">
+      <section id="home-hero" className="bg-white py-8 md:py-11">
         <div className="container mx-auto px-8 md:px-16 text-center">
           <p className="text-5xl md:text-6xl mb-6 font-bold">
             <span 
@@ -81,7 +81,7 @@ const Home = () => {
                 loop 
                 muted 
                 playsInline
-                poster={omamaFreezer}
+                poster=""
                 className="w-full h-auto rounded-xl"
                 style={{aspectRatio: '16/9'}}
               >
@@ -98,6 +98,119 @@ const Home = () => {
                 See How It Works <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* O Mama: Fueling High-Performance Workplaces */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-8 md:px-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            <span style={{color: '#014721'}}>O Mama: Fueling</span> <span style={{color: '#2AA63E'}}>High-Performance Workplaces</span>
+          </h2>
+          
+          {/* Part 1: Logistical Value */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center pt-8" style={{color: '#014721'}}>
+              1. Why O Mama is Ideal for Your Large Team (50+ Employees)
+            </h3>
+            <p className="text-lg text-gray-700 mb-12 text-center max-w-4xl mx-auto">
+              O Mama specializes in solving the logistical and nutritional challenges for corporate offices, hospitals, and universities with 50 or more employees.
+            </p>
+            
+            <div className="bg-white shadow-xl overflow-hidden">
+              {/* Header Row */}
+              <div className="grid grid-cols-3 bg-primary text-white">
+                <div className="px-2 py-3 text-xs md:text-base font-semibold">Your Challenge</div>
+                <div className="px-2 py-3 text-xs md:text-base font-semibold">Our Solution</div>
+                <div className="px-2 py-3 text-xs md:text-base font-semibold">Your Benefit</div>
+              </div>
+              
+              {/* Row 1 */}
+              <div className="grid grid-cols-3 border-b border-gray-200">
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Complexity & Scale</strong>
+                </div>
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Zero Infrastructure:</strong> No need for an on-site kitchen, staff, or food waste.
+                </div>
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Significant Cost Savings</strong> and reduced overhead.
+                </div>
+              </div>
+              
+              {/* Row 2 */}
+              <div className="grid grid-cols-3 border-b border-gray-200 bg-gray-50">
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Dietary Needs</strong>
+                </div>
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Inclusive Platform:</strong> Easily handles <strong>vegan, gluten-free, and allergy-specific</strong> requests for hundreds of employees.
+                </div>
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>High Employee Satisfaction</strong> and compliance.
+                </div>
+              </div>
+              
+              {/* Row 3 */}
+              <div className="grid grid-cols-3">
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Efficiency</strong>
+                </div>
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Seamless Tech:</strong> Individual ordering and personalized delivery handles all the complexity.
+                </div>
+                <div className="px-2 py-3 text-xs md:text-base text-gray-700">
+                  <strong>Maximum Convenience</strong> with minimum administrative effort.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr className="border-gray-300 mb-16" />
+
+          {/* Part 2: Motivational Value */}
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center" style={{color: '#014721'}}>
+              2. Fuel Your Peak Performance: The Motivational Power of Healthy Eating
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h4 className="text-xl font-bold mb-3" style={{color: '#2AA63E'}}>⚡ Energy</h4>
+                <p className="text-gray-700">
+                  <strong>Switch On, Stay On:</strong> Healthy fuel gives you stable, all-day energy, eliminating the burnout cycle and sustaining your momentum from morning coffee to final deadline.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h4 className="text-xl font-bold mb-3" style={{color: '#2AA63E'}}>🧠 Clarity</h4>
+                <p className="text-gray-700">
+                  <strong>Think Sharper, Decide Better:</strong> Feed your brain omega-3s and antioxidants to cut through mental fog and approach complex problems with crystal-clear focus.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h4 className="text-xl font-bold mb-3" style={{color: '#2AA63E'}}>🛡️ Resilience</h4>
+                <p className="text-gray-700">
+                  <strong>Build Your Inner Armor:</strong> Nutrient-dense food is your best defense. It strengthens your immune system so you spend less time sick and more time leading.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h4 className="text-xl font-bold mb-3" style={{color: '#2AA63E'}}>😊 Mood</h4>
+                <p className="text-gray-700">
+                  <strong>Control Your Day, Not Your Cravings:</strong> Balanced nutrition regulates hormones, stabilizing your mood and reducing stress. Fuel your success, not your 'hangry' moments.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h4 className="text-xl font-bold mb-3" style={{color: '#2AA63E'}}>🌟 Longevity</h4>
+                <p className="text-gray-700">
+                  <strong>Invest in Your Future Self:</strong> Every healthy meal is a powerful decision that supports long-term health, ensuring you have the vitality to chase your biggest goals for years to come.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -265,7 +378,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-primary text-white">
+      <section id="cta" className="py-16" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
         <div className="container mx-auto px-8 md:px-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Transform Your Workplace?
@@ -280,11 +393,8 @@ const Home = () => {
       </section>
 
       {/* Video Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="video" className="py-10" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12" style={{color: '#014721'}}>
-            The Game Changing Smart Freezer in Action
-          </h2>
           <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
             <iframe
               className="w-full h-full"

@@ -43,11 +43,11 @@ const Experience = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-primary/5 py-20">
+      <section id="experience-hero" className="py-20" style={{backgroundColor: '#F0FFF0'}}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              The O Mama Experience
+              <span style={{color: '#014721'}}>The O Mama</span> <span style={{color: '#2AA63E'}}>Experience</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Shopping should feel natural, not mechanical. That's why O Mama works like your home freezer, not a traditional vending machine.
@@ -112,64 +112,67 @@ const Experience = () => {
       <section className="py-20 bg-feature-bg">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Mini-Mart vs. Vending Machine
+            O Mama Smart Freezer vs. Vending Machine
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
             Experience the difference with O Mama's superior approach
           </p>
 
-          <div className="max-w-5xl mx-auto overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-primary text-primary-foreground">
-                  <th className="p-4 text-left font-bold">Feature</th>
-                  <th className="p-4 text-left font-bold">O Mama Smart Freezer</th>
-                  <th className="p-4 text-left font-bold">Traditional Vending</th>
-                </tr>
-              </thead>
-              <tbody className="bg-card">
-                <tr className="border-b border-border">
-                  <td className="p-4 font-semibold">User Experience</td>
-                  <td className="p-4">
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <span>Open door, browse freely, pick up, check, return if desired</span>
-                    </div>
-                  </td>
-                  <td className="p-4 text-muted-foreground">Press button, accept whatever dispenses</td>
-                </tr>
-                <tr className="border-b border-border bg-muted/30">
-                  <td className="p-4 font-semibold">Transaction</td>
-                  <td className="p-4">
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <span>Touchless app-based access, auto-deduction on door close</span>
-                    </div>
-                  </td>
-                  <td className="p-4 text-muted-foreground">Touch buttons/slots, prone to stuck items</td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="p-4 font-semibold">Trust & Hygiene</td>
-                  <td className="p-4">
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <span>24/7 cold chain monitoring, dedicated CCTV, cashless</span>
-                    </div>
-                  </td>
-                  <td className="p-4 text-muted-foreground">Low visibility on inventory/temperature</td>
-                </tr>
-                <tr className="bg-muted/30">
-                  <td className="p-4 font-semibold">Product Selection</td>
-                  <td className="p-4">
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <span>See all products, inspect physically before purchase</span>
-                    </div>
-                  </td>
-                  <td className="p-4 text-muted-foreground">Limited view through glass, selection by number</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="max-w-5xl mx-auto bg-white shadow-xl overflow-hidden">
+            {/* Header Row */}
+            <div className="grid grid-cols-3 bg-primary text-white">
+              <div className="px-2 py-3 text-xs md:text-base font-bold">Feature</div>
+              <div className="px-2 py-3 text-xs md:text-base font-bold">O Mama Smart Freezer</div>
+              <div className="px-2 py-3 text-xs md:text-base font-bold">Traditional Vending</div>
+            </div>
+            
+            {/* User Experience */}
+            <div className="grid grid-cols-3 border-b border-gray-200">
+              <div className="px-2 py-3 text-xs md:text-base font-semibold">User Experience</div>
+              <div className="px-2 py-3 text-xs md:text-base">
+                <div className="flex items-start space-x-1">
+                  <CheckCircle2 className="text-primary flex-shrink-0 mt-0.5" size={12} />
+                  <span>Open door, browse freely, pick up, check, return if desired</span>
+                </div>
+              </div>
+              <div className="px-2 py-3 text-xs md:text-base text-muted-foreground">Press button, accept whatever dispenses</div>
+            </div>
+
+            {/* Transaction */}
+            <div className="grid grid-cols-3 border-b border-gray-200 bg-muted/30">
+              <div className="px-2 py-3 text-xs md:text-base font-semibold">Transaction</div>
+              <div className="px-2 py-3 text-xs md:text-base">
+                <div className="flex items-start space-x-1">
+                  <CheckCircle2 className="text-primary flex-shrink-0 mt-0.5" size={12} />
+                  <span>Touchless app-based access, auto-deduction on door close</span>
+                </div>
+              </div>
+              <div className="px-2 py-3 text-xs md:text-base text-muted-foreground">Touch buttons/slots, prone to stuck items</div>
+            </div>
+
+            {/* Trust & Hygiene */}
+            <div className="grid grid-cols-3 border-b border-gray-200">
+              <div className="px-2 py-3 text-xs md:text-base font-semibold">Trust & Hygiene</div>
+              <div className="px-2 py-3 text-xs md:text-base">
+                <div className="flex items-start space-x-1">
+                  <CheckCircle2 className="text-primary flex-shrink-0 mt-0.5" size={12} />
+                  <span>24/7 cold chain monitoring, dedicated CCTV, cashless</span>
+                </div>
+              </div>
+              <div className="px-2 py-3 text-xs md:text-base text-muted-foreground">Low visibility on inventory/temperature</div>
+            </div>
+
+            {/* Product Selection */}
+            <div className="grid grid-cols-3 bg-muted/30">
+              <div className="px-2 py-3 text-xs md:text-base font-semibold">Product Selection</div>
+              <div className="px-2 py-3 text-xs md:text-base">
+                <div className="flex items-start space-x-1">
+                  <CheckCircle2 className="text-primary flex-shrink-0 mt-0.5" size={12} />
+                  <span>See all products, inspect physically before purchase</span>
+                </div>
+              </div>
+              <div className="px-2 py-3 text-xs md:text-base text-muted-foreground">Limited view through glass, selection by number</div>
+            </div>
           </div>
         </div>
       </section>

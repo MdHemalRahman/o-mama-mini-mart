@@ -4,12 +4,12 @@ import paymentImage from "@/assets/payment.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
       <div className="container mx-auto px-4 pt-12 pb-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4" style={{color: '#2AA63E'}}>O Mama</h3>
+            <h3 className="text-2xl font-bold mb-4" style={{color: '#014721'}}>O Mama</h3>
             <p className="text-sm mb-4 opacity-90">
               Fresh Food · Smart Life
             </p>
@@ -34,7 +34,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/partnership" className="opacity-75 hover:opacity-100 hover:text-primary transition-colors" onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)}>
-                  Partnership Terms
+                  Partnership & Terms
                 </Link>
               </li>
               <li>
