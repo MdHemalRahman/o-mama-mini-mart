@@ -61,7 +61,7 @@ const Platform = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span style={{color: '#014721'}}>Advanced Technology</span> <span style={{color: '#2AA63E'}}>Platform</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm md:text-xl text-muted-foreground mb-8" style={{fontSize: '14px'}}>
               Built on cutting-edge IoT technology with real-time monitoring, AI-powered inventory management, and complete operational transparency.
             </p>
           </div>
@@ -74,7 +74,7 @@ const Platform = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Enterprise-Grade Technology
           </h2>
-          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto text-sm md:text-base" style={{fontSize: '14px'}}>
             Every O Mama Smart Freezer is equipped with advanced sensors and connectivity for complete operational control
           </p>
 
@@ -109,7 +109,7 @@ const Platform = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Data That Drives Decision-Making
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-sm md:text-lg text-muted-foreground mb-6" style={{fontSize: '14px'}}>
                 Our cloud-based platform provides complete visibility into every aspect of your O Mama Smart Freezer operation.
               </p>
               <ul className="space-y-4">
@@ -165,9 +165,9 @@ const Platform = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                The O Mama App
+                The Tolpar App
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-sm md:text-lg text-muted-foreground mb-6" style={{fontSize: '14px'}}>
                 A seamless mobile experience that puts convenience at your fingertips. Access fresh food with just a scan.
               </p>
               

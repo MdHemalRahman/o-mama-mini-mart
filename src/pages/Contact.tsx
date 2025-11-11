@@ -81,7 +81,7 @@ const Contact = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span style={{color: '#014721'}}>Request a</span> <span style={{color: '#2AA63E'}}>Consultation</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm md:text-xl text-muted-foreground mb-8" style={{fontSize: '14px'}}>
               Let's discuss how O Mama Smart Freezer can enhance your workplace environment. Our team will contact you to understand your needs and provide a customized solution.
             </p>
           </div>

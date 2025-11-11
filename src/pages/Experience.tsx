@@ -49,7 +49,7 @@ const Experience = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span style={{color: '#014721'}}>The O Mama</span> <span style={{color: '#2AA63E'}}>Experience</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm md:text-xl text-muted-foreground mb-8" style={{fontSize: '14px'}}>
               Shopping should feel natural, not mechanical. That's why O Mama works like your home freezer, not a traditional vending machine.
             </p>
           </div>
@@ -63,7 +63,7 @@ const Experience = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: '#014721'}}>
               HR Partner Testimonial
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto" style={{fontSize: '14px'}}>
               Watch a testimonial from an HR partner at SAVOR, confirming that the O Mama Smart Freezer has solved their employees' issue with lack of convenient, healthy breakfast and lunch options nearby.
             </p>
             <div className="aspect-[9/16] max-w-sm mx-auto rounded-xl overflow-hidden shadow-2xl">

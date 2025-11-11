@@ -45,7 +45,7 @@ const Partnership = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span style={{color: '#014721'}}>Partnership &</span> <span style={{color: '#2AA63E'}}>Terms</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm md:text-xl text-muted-foreground mb-8" style={{fontSize: '14px'}}>
               A transparent, full-service partnership model designed for mutual success and long-term collaboration.
             </p>
           </div>
@@ -61,7 +61,7 @@ const Partnership = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 O Mama's Full-Service Commitment
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm md:text-lg text-muted-foreground" style={{fontSize: '14px'}}>
                 We handle everything so you can focus on your core business
               </p>
             </div>
@@ -91,7 +91,7 @@ const Partnership = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Minimal Client Requirements for a Seamless Launch
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm md:text-lg text-muted-foreground" style={{fontSize: '14px'}}>
                 Three essential requirements for successful operation
               </p>
             </div>
@@ -127,7 +127,7 @@ const Partnership = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Commercial Terms
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm md:text-lg text-muted-foreground" style={{fontSize: '14px'}}>
                 Clear, straightforward terms for a successful partnership
               </p>
             </div>
@@ -172,7 +172,7 @@ const Partnership = () => {
             <Card className="mt-8 border-2 border-muted">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold mb-4">Early Termination Conditions</h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 text-sm md:text-base" style={{fontSize: '14px'}}>
                   SOHUB reserves the right to terminate the partnership under the following circumstances:
                 </p>
                 <ul className="space-y-3">

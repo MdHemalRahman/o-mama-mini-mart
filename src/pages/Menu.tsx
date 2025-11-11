@@ -81,9 +81,108 @@ const Menu = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span style={{color: '#014721'}}>Food &</span> <span style={{color: '#2AA63E'}}>Freshness</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm md:text-xl text-muted-foreground mb-8" style={{fontSize: '14px'}}>
               Healthy, fresh, and hygienic food maintained at optimal temperature, available 24/7 for your convenience.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fuel Your Peak Performance Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+              <span style={{color: '#014721'}}>Fuel Your Peak Performance:</span> <span style={{color: '#2AA63E'}}>Eat Smart, Work Better</span>
+            </h2>
+            
+            {/* The Critical Three */}
+            <div className="mb-16">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{color: '#014721'}}>
+                1. The Critical Three: When to Fuel Up
+              </h3>
+              <p className="text-sm md:text-lg text-gray-700 mb-6" style={{fontSize: '14px'}}>
+                Successful people prioritize consistent, quality energy. Your performance depends on fueling up at these critical points:
+              </p>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3"></div>
+                  <div>
+                    <strong>Breakfast (Ignition):</strong> Don't run on fumes. Breakfast <strong>activates your brain's concentration and focus</strong>, stabilizing your mood and metabolism for the entire day.
+                  </div>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3"></div>
+                  <div>
+                    <strong>Afternoon Snack (Sustain):</strong> Beat the 3 PM crash. A healthy snack is a <strong>strategic fuel injection</strong> that prevents sugar spikes, maintains energy stability, and keeps you sharp until dinner.
+                  </div>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3"></div>
+                  <div>
+                    <strong>Constant Hydration:</strong> Keeps your brain clear and your energy high.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* The ROI of Healthy Eating */}
+            <div className="mb-16">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{color: '#014721'}}>
+                2. The ROI of Healthy Eating
+              </h3>
+              <p className="text-sm md:text-lg text-gray-700 mb-8" style={{fontSize: '14px'}}>
+                Switching to a healthy habit isn't a cost—it's an investment that delivers guaranteed returns in productivity and well-being.
+              </p>
+              <div className="bg-white shadow-xl overflow-hidden">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-primary text-white">
+                      <th className="px-2 py-3 text-xs md:text-base font-semibold text-left">Benefit</th>
+                      <th className="px-2 py-3 text-xs md:text-base font-semibold text-left">Impact on Your Workday</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200">
+                      <td className="px-2 py-3 text-xs md:text-base text-gray-700"><strong>Cognitive Clarity</strong></td>
+                      <td className="px-2 py-3 text-xs md:text-base text-gray-700">Better food means better decisions. Improve <strong>focus, memory, and complex problem-solving</strong>.</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 bg-gray-50">
+                      <td className="px-2 py-3 text-xs md:text-base text-gray-700"><strong>Resilience</strong></td>
+                      <td className="px-2 py-3 text-xs md:text-base text-gray-700">Nutrient-dense food strengthens immunity, leading to <strong>fewer sick days</strong> and higher consistency.</td>
+                    </tr>
+                    <tr>
+                      <td className="px-2 py-3 text-xs md:text-base text-gray-700"><strong>Mood Stabilization</strong></td>
+                      <td className="px-2 py-3 text-xs md:text-base text-gray-700">Avoid the "hangry" slump. Stable energy leads to a <strong>positive attitude</strong> and enhanced collaboration.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Build a Good Habit with O Mama */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{color: '#014721'}}>
+                3. Build a Good Habit with O Mama
+              </h3>
+              <p className="text-sm md:text-lg text-gray-700 mb-6" style={{fontSize: '14px'}}>
+                Good habits thrive on convenience. O Mama removes the friction, making healthy choices the easiest choices.
+              </p>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3"></div>
+                  <div>
+                    <strong>Zero Effort:</strong> <strong>Fresh, ready-to-eat options</strong> are available on-site, eliminating preparation time and decision fatigue.
+                  </div>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3"></div>
+                  <div>
+                    <strong>Instant Reward:</strong> The immediate feeling of clarity and energy reinforces the healthy decision, turning it into a seamless, automatic habit.
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -103,7 +202,7 @@ const Menu = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Quality You Can Trust
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-sm md:text-lg text-muted-foreground mb-8" style={{fontSize: '14px'}}>
                 Every product in O Mama Smart Freezer meets our strict quality and hygiene standards. From sourcing to serving, we maintain the highest level of food safety.
               </p>
               
@@ -129,7 +228,7 @@ const Menu = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Our Menu Categories
           </h2>
-          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto text-sm md:text-base" style={{fontSize: '14px'}}>
             A diverse selection of healthy options to suit every taste and dietary preference
           </p>
 
@@ -166,7 +265,7 @@ const Menu = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Affordable & Accessible
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-sm md:text-lg text-muted-foreground mb-6" style={{fontSize: '14px'}}>
                 O Mama is committed to providing healthy food options at prices aligned with local market rates. We believe that quality nutrition should be accessible to everyone.
               </p>
               

@@ -69,7 +69,7 @@ const Home = () => {
               }
             }
           `}</style>
-          <p className="text-xl mb-8 text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-xl mb-8 text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{fontSize: '14px'}}>
             Making healthy, fresh, and hygienic food accessible for everyone, anytime, anywhere in your workplace.
           </p>
           
@@ -114,7 +114,7 @@ const Home = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center pt-8" style={{color: '#014721'}}>
               1. Why O Mama is Ideal for Your Large Team (50+ Employees)
             </h3>
-            <p className="text-lg text-gray-700 mb-12 text-center max-w-4xl mx-auto">
+            <p className="text-sm md:text-lg text-gray-700 mb-12 text-center max-w-4xl mx-auto" style={{fontSize: '14px'}}>
               O Mama specializes in solving the logistical and nutritional challenges for corporate offices, hospitals, and universities with 50 or more employees.
             </p>
             
@@ -221,7 +221,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
             <span style={{color: '#014721'}}>Why O Mama is</span> <span style={{color: '#2AA63E'}}>Different</span>
           </h2>
-          <p className="text-center text-gray-600 mb-20 max-w-3xl mx-auto text-xl leading-relaxed">
+          <p className="text-center text-gray-600 mb-20 max-w-3xl mx-auto text-sm md:text-xl leading-relaxed" style={{fontSize: '14px'}}>
             Unlike traditional vending machines, O Mama gives you the freedom and convenience of a personal mini-mart
           </p>
           
@@ -346,7 +346,7 @@ const Home = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 <span style={{color: '#014721'}}>Healthy, Fresh &</span> <span style={{color: '#2AA63E'}}>Hygienic</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-sm md:text-xl text-gray-600 mb-8 leading-relaxed" style={{fontSize: '14px'}}>
                 From fresh cut fruits and healthy snacks to beverages and light meals - all maintained at optimal temperature with 24/7 monitoring.
               </p>
               <div className="space-y-6 mb-12">
@@ -383,7 +383,7 @@ const Home = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Transform Your Workplace?
           </h2>
-          <p className="text-2xl mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed" style={{fontSize: '14px'}}>
             Join leading organizations providing 24/7 access to fresh, healthy food for their teams
           </p>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100 px-12 py-6 text-xl font-semibold">
