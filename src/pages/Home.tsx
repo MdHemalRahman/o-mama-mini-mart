@@ -386,7 +386,7 @@ const Home = () => {
           <p className="text-sm md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed" style={{fontSize: '14px'}}>
             Join leading organizations providing 24/7 access to fresh, healthy food for their teams
           </p>
-          <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100 px-12 py-6 text-xl font-semibold">
+          <Button asChild size="lg" className="px-12 py-6 text-xl font-semibold text-white hover:opacity-90" style={{backgroundColor: '#014721'}}>
             <Link to="/contact">Contact</Link>
           </Button>
         </div>

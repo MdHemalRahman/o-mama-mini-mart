@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Partnership = () => {
   const omamaCommitments = [
-    "Ownership of smart freezer equipment",
+    "Smart Freezer Solution Provided and Fully Managed",
     "Complete installation at your location",
     "Ongoing maintenance and technical support",
     "Daily inventory management and restocking",
@@ -199,51 +199,63 @@ const Partnership = () => {
       </section>
 
       {/* Benefits of Partnership */}
-      <section className="py-20 bg-feature-bg">
+      <section className="py-20" style={{backgroundColor: '#F0FFF0'}}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{color: '#014721'}}>
               Partnership Benefits
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{backgroundColor: '#2AA63E'}}>
+                  <CheckCircle2 className="text-white" size={20} />
+                </div>
                 <div>
                   <strong className="text-lg">Zero Capital Investment</strong>
                   <p className="text-muted-foreground">Only refundable security deposit required</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{backgroundColor: '#2AA63E'}}>
+                  <CheckCircle2 className="text-white" size={20} />
+                </div>
                 <div>
                   <strong className="text-lg">No Operational Hassle</strong>
                   <p className="text-muted-foreground">We manage inventory and maintenance</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{backgroundColor: '#2AA63E'}}>
+                  <CheckCircle2 className="text-white" size={20} />
+                </div>
                 <div>
                   <strong className="text-lg">Employee Welfare</strong>
                   <p className="text-muted-foreground">24/7 access to fresh, healthy food</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{backgroundColor: '#2AA63E'}}>
+                  <CheckCircle2 className="text-white" size={20} />
+                </div>
                 <div>
                   <strong className="text-lg">Modern Workplace Amenity</strong>
                   <p className="text-muted-foreground">Enhance your company's appeal to talent</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{backgroundColor: '#2AA63E'}}>
+                  <CheckCircle2 className="text-white" size={20} />
+                </div>
                 <div>
                   <strong className="text-lg">Revenue Sharing Potential</strong>
                   <p className="text-muted-foreground">Benefit from high-performing locations</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1" style={{backgroundColor: '#2AA63E'}}>
+                  <CheckCircle2 className="text-white" size={20} />
+                </div>
                 <div>
                   <strong className="text-lg">Scalable Solution</strong>
                   <p className="text-muted-foreground">Add more units as your organization grows</p>

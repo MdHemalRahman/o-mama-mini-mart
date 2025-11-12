@@ -17,7 +17,7 @@ const Platform = () => {
     {
       icon: BarChart3,
       title: "Smart Inventory Management",
-      description: "Minimize Waste & Guarantee Stock. Our AI-driven system predicts demand and reduces restocking time by X%.",
+      description: "Minimize Waste & Guarantee Stock. Our intelligent management system anticipates demand, ensuring stock is always fresh and restocking is X% faster.",
     },
     {
       icon: Wallet,
@@ -27,7 +27,7 @@ const Platform = () => {
     {
       icon: Camera,
       title: "Security & Transparency",
-      description: "Dedicated CCTV camera for accountability. Complete visibility and trust in every transaction.",
+      description: "Full Transaction Assurance and unwavering accountability ensure complete trust in every purchase.",
     },
     {
       icon: Wifi,
@@ -188,21 +188,6 @@ const Platform = () => {
                 className="rounded-2xl shadow-xl"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Security & Trust */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Camera size={48} className="mx-auto mb-6 text-primary" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Security & Accountability
-            </h2>
-            <p className="text-lg opacity-90 mb-8">
-              Every O Mama Smart Freezer is equipped with a dedicated CCTV camera that provides transparency and security for both users and operators. Combined with cloud-based monitoring and secure digital payments, you can trust that every transaction is safe and accountable.
-            </p>
           </div>
         </div>
       </section>

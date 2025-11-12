@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Smartphone, DoorOpen, ShoppingCart, CreditCard, CheckCircle2 } from "lucide-react";
+import { Smartphone, DoorOpen, ShoppingCart, CreditCard, CheckCircle2, Eye, Search, RefreshCcw, ShieldCheck, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -30,14 +30,38 @@ const Experience = () => {
   ];
 
   const advantages = [
-    "Freedom to browse all products without pressing buttons",
-    "Ability to inspect items before purchasing",
-    "Change your mind freely - place items back if unsure",
-    "No stuck products or failed transactions",
-    "Completely touchless payment process",
-    "Natural shopping experience like your home freezer",
+    {
+      icon: Eye,
+      title: "Browse Freely",
+      description: "Freedom to browse all products without pressing buttons, just like your home fridge.",
+    },
+    {
+      icon: Search,
+      title: "Inspect Before Purchase",
+      description: "Ability to inspect items closely before purchasing, ensuring satisfaction.",
+    },
+    {
+      icon: RefreshCcw,
+      title: "Change Your Mind",
+      description: "Place items back if unsure, no pressure or commitment until the door closes.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Guaranteed Transactions",
+      description: "No stuck products or failed transactions, ensuring a smooth shopping experience.",
+    },
+    {
+      icon: CreditCard,
+      title: "Touchless Payment",
+      description: "Completely touchless and automatic payment process for hygiene and convenience.",
+    },
+    {
+      icon: Home,
+      title: "Home-Like Experience",
+      description: "Natural shopping experience, just like opening your home freezer.",
+    },
   ];
-
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -52,29 +76,6 @@ const Experience = () => {
             <p className="text-sm md:text-xl text-muted-foreground mb-8" style={{fontSize: '14px'}}>
               Shopping should feel natural, not mechanical. That's why O Mama works like your home freezer, not a traditional vending machine.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Success Story */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: '#014721'}}>
-              HR Partner Testimonial
-            </h2>
-            <p className="text-sm md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto" style={{fontSize: '14px'}}>
-              Watch a testimonial from an HR partner at SAVOR, confirming that the O Mama Smart Freezer has solved their employees' issue with lack of convenient, healthy breakfast and lunch options nearby.
-            </p>
-            <div className="aspect-[9/16] max-w-sm mx-auto rounded-xl overflow-hidden shadow-2xl">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/mzh978dzt_E?cc_load_policy=1&cc_lang_pref=en"
-                title="O Mama Client Success Story - SAVOR HR Partner Testimonial"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -178,20 +179,51 @@ const Experience = () => {
       </section>
 
       {/* Key Advantages */}
-      <section className="py-20">
+      <section className="py-20 bg-green-50"> {/* Added contrasting background color */}
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto"> {/* Increased max-width for 3-column grid */}
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Why Users Love O Mama
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {advantages.map((advantage, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={24} />
-                  <p className="text-lg">{advantage}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Changed to 3-column grid */}
+              {advantages.map((advantage, index) => {
+                const AdvantageIcon = advantage.icon; // Renamed for JSX component usage
+                return (
+                  <Card key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <AdvantageIcon className="text-primary" size={32} /> {/* Large, prominent icon */}
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{advantage.title}</h3> {/* Core benefit as heading */}
+                      <p className="text-muted-foreground text-sm">{advantage.description}</p> {/* Descriptive text as body */}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+        </div>
+        </div>
+      </section>
+
+      {/* Client Success Story */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: '#014721'}}>
+              User Review
+            </h2>
+            <p className="text-sm md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto" style={{fontSize: '14px'}}>
+              Watch a review from an user at SAVOR, confirming that the O Mama Smart Freezer has solved their employees' issue with lack of convenient, healthy breakfast and lunch options nearby.
+            </p>
+            <div className="aspect-[9/16] max-w-sm mx-auto rounded-xl overflow-hidden shadow-2xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/mzh978dzt_E?cc_load_policy=1&cc_lang_pref=en"
+                title="O Mama Client Success Story - SAVOR HR Partner Testimonial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

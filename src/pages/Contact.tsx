@@ -5,12 +5,19 @@ import * as z from "zod";
 import { Mail, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input"; // Keep for other fields
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const contactSchema = z.object({
   fullName: z.string()
@@ -147,9 +154,22 @@ const Contact = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Organization/Company Name *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your organization name" {...field} />
-                          </FormControl>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue placeholder="Select Organization/Company Name" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="University/College">University/College</SelectItem>
+                              <SelectItem value="Corporate Office">Corporate Office</SelectItem>
+                              <SelectItem value="Shopping Mall/Center">Shopping Mall/Center</SelectItem>
+                              <SelectItem value="Hospital/Clinic">Hospital/Clinic</SelectItem>
+                              <SelectItem value="Bus/Train/Metro Station">Bus/Train/Metro Station</SelectItem>
+                              <SelectItem value="Shop/Convenience Store">Shop/Convenience Store</SelectItem>
+                              <SelectItem value="Others">Others</SelectItem>
+                            </SelectContent>
+                          </Select>
                           <FormMessage />
                         </FormItem>
                       )}
@@ -220,7 +240,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-bold text-lg mb-2">Email Us</h3>
                         <p className="text-muted-foreground">
-                          www.sohub.com.bd
+                          hello@sohub.com.bd
                         </p>
                       </div>
                     </div>

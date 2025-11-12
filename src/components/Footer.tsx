@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
 import paymentImage from "@/assets/payment.png";
 
 const Footer = () => {
@@ -16,6 +16,23 @@ const Footer = () => {
             <p className="text-sm opacity-75">
               Smart Freezer Solution in Bangladesh
             </p>
+
+            {/* Social Media Links */}
+            <h4 className="font-semibold mt-6 mb-4">Follow Us</h4>
+            <div className="flex space-x-4">
+              <a href="https://www.instagram.com/solutionhubtechnologies/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                <Instagram size={24} />
+              </a>
+              <a href="https://www.facebook.com/solutionhubtechnologies?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                <Facebook size={24} />
+              </a>
+              <a href="https://www.youtube.com/@solutionhubtechnologysohub" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                <Youtube size={24} />
+              </a>
+              <a href="https://www.linkedin.com/company/solution-hub-technologie-sohub?originalSubdomain=bd" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                <Linkedin size={24} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}

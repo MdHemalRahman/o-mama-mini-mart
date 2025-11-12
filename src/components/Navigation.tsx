@@ -93,7 +93,7 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Button asChild className="ml-4" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
+            <Button asChild className="ml-4 border-2 border-[#0c0d0c]" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
               <Link to="/contact">Contact</Link>
             </Button>
           </div>
@@ -124,7 +124,7 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="mt-4" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
+              <Button asChild className="mt-4 border-2 border-[#0c0d0c]" style={{backgroundColor: '#F0FFF0', color: '#0c0d0c'}}>
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Contact
                 </Link>
